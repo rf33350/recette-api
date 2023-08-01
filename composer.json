@@ -62,7 +62,8 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "fix": "php-cs-fixer fix"
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -74,6 +75,7 @@
         }
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.22",
         "symfony/maker-bundle": "^1.50"
     }
 }
