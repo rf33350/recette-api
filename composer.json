@@ -7,14 +7,24 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^2.10",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.15",
+        "stof/doctrine-extensions-bundle": "^1.8",
+        "symfony/asset": "6.3.*",
         "symfony/console": "6.3.*",
         "symfony/dotenv": "6.3.*",
         "symfony/flex": "^2",
+        "symfony/form": "6.3.*",
         "symfony/framework-bundle": "6.3.*",
+        "symfony/http-foundation": "6.3.*",
+        "symfony/http-kernel": "6.3.*",
         "symfony/runtime": "6.3.*",
-        "symfony/yaml": "6.3.*"
-    },
-    "require-dev": {
+        "symfony/security-bundle": "6.3.*",
+        "symfony/twig-bundle": "6.3.*",
+        "symfony/yaml": "6.3.*",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/twig": "^2.12|^3.0"
     },
     "config": {
         "allow-plugins": {
@@ -53,6 +63,11 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "fix": "php-cs-fixer fix",
+        "check": [
+            "phpstan",
+            "php-cs-fixer fix --dry-run --diff"
         ]
     },
     "conflict": {
@@ -63,5 +78,14 @@
             "allow-contrib": false,
             "require": "6.3.*"
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.22",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-doctrine": "^1.3",
+        "phpstan/phpstan-phpunit": "^1.3",
+        "phpstan/phpstan-symfony": "^1.3",
+        "symfony/maker-bundle": "^1.50"
     }
 }
