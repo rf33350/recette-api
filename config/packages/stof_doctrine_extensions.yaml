@@ -1,0 +1,10 @@
+# app/config/config.yml
+# (or config/packages/stof_doctrine_extensions.yaml if you use Flex)
+stof_doctrine_extensions:
+    default_locale: fr-FR
+    orm:
+        default:
+            tree: true
+            timestampable: true
+            sluggable: true
+            sortable: true
